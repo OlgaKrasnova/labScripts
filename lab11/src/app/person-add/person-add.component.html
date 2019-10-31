@@ -7,7 +7,7 @@
             <input type="text" class="form-control" placeholder="Фамилия" #inputLastname (keydown)="onValidate(inputFirstName, inputLastName, saveButton)">
         </div>
         <div class="col-12 mt-2">
-            <button class="btn btn-primary" (click)="onAddPerson(inputFirstname.value, inputLastname.value, saveButton)"  #saveButton>Сохранить</button>
+            <button class="btn btn-success" (click)="onAddPerson(inputFirstname.value, inputLastname.value, saveButton)" disabled #saveButton>Сохранить</button>
         </div>
     </div>
 </div>
