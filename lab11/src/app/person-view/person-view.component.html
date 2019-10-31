@@ -1,19 +1,16 @@
 <div class="container">
     <div class="row">
-        <div class="col-2 mb-4">{{inPerson.firstname}}</div>
-        <div class="col-2 mb-4">{{inPerson.lastname}}</div>
-        <div class="col-2 mb-4">{{inPerson.id}}</div>
-        <div class="col-2 mb-4"><button class="btn btn-primary" (click)="showEdit()">{{addEdit}}</button></div>
+        <div class="col-2 mb-2">{{inPerson.firstname}}</div>
+        <div class="col-2 mb-2">{{inPerson.lastname}}</div>
+        <div class="col-2 mb-2">{{inPerson.id}}</div>
+        <div class="col-2 mb-2"><button class="btn btn-primary" (click)="showEdit()">{{addEdit}}</button></div>
 
-        <div *ngIf=isEdit>
-            <div class="col-2">
-                <input type="text" class="fotm-control" placeholder="Имя" [(ngModel)]="inPerson.firstname">
+        <div class="row" *ngIf=isEdit>
+            <div class="col-4 mb-2">
+                <input type="text" class="form-control" placeholder="Имя" [(ngModel)]="inPerson.firstname">
             </div>
-            <div class="col-2">
-                <input type="text" class="fotm-control" placeholder="Имя" [(ngModel)]="inPerson.lastname">
-            </div>
-            <div class="col-2">
-                <input type="text" class="fotm-control" placeholder="Имя" [(ngModel)]="inPerson.id">
+            <div class="col-4 mb-2">
+                <input type="text" class="form-control" placeholder="Фамилия" [(ngModel)]="inPerson.lastname">
             </div>
             <br>
         </div>
