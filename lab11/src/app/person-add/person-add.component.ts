@@ -15,9 +15,20 @@ export class PersonAddComponent implements OnInit {
   ngOnInit() {
   }
 
-  onAddPerson(firstname: string, lastname: string) {
+  onAddPerson(firstname: string, lastname: string, saveButton) {
     let person = new Person(firstname, lastname);
+    firstname = "";
+    lastname = "";
     this.addperson.emit(person);
+    // saveButton.disabled = true;
   }
+  // onValidate(inputFirstName, inputLastName, saveButton) {
+  //   if (inputFirstName.value && inputLastName.value) {
+  //     saveButton.disabled = false;
+  //   }
+  // }
+
+
+  
 
 }

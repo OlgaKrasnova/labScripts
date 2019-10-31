@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <input type="text" class="form-control" placeholder="Имя" #inputFirstname>
+            <input type="text" class="form-control" placeholder="Имя" #inputFirstname (keydown)="onValidate(inputFirstName, inputLastName, saveButton)">
         </div>
         <div class="col-12 mt-2">
-            <input type="text" class="form-control" placeholder="Фамилия" #inputLastname>
+            <input type="text" class="form-control" placeholder="Фамилия" #inputLastname (keydown)="onValidate(inputFirstName, inputLastName, saveButton)">
         </div>
         <div class="col-12 mt-2">
-            <button class="btn btn-primary" (click)="onAddPerson(inputFirstname.value, inputLastname.value)">Сохранить</button>
+            <button class="btn btn-primary" (click)="onAddPerson(inputFirstname.value, inputLastname.value, saveButton)"  #saveButton>Сохранить</button>
         </div>
     </div>
 </div>
